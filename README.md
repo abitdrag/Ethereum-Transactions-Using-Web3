@@ -5,7 +5,7 @@ This repository shows how you can make transactions on Ethereum blockchain using
 Install web3   
 `pip install web3`
 
-Install ethtoken.abi   
+Install ethtoken  
 `pip install ethtoken`   
 
 Add make_transactions.py to your working directory and import it   
