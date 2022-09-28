@@ -172,3 +172,18 @@ def send_custom_data(from_addr, to_addr, data, gas_limit, gas_gwei, key, nonce=N
 		except Exception as e:
 			print ('['+ time.strftime("%Y-%m-%d %I:%M:%S %p") +'] Error occured: {0}\t TRYING AGAIN...'.format(str(e)))
 	print ('\n['+ time.strftime("%Y-%m-%d %I:%M:%S %p") +'] ETH sent. ID = https://etherscan.io/tx/{0}'.format(transaction_id.hex()))
+
+# returns balances of all tokens on passed address
+def get_all_balances(addr):
+	url = 'https://api.ethplorer.io/getAddressInfo/'+ addr +'?apiKey=' + ethplorerkey
+	r = requests.get(url)
+	r = r.json()
+	balances = {}
+	for token in r['tokens']:
+		token_symbol = token['tokenInfo']['symbol']
+		token_balance = int(token['balance'])/10**int(token['tokenInfo']['decimals'])
+		token_addr = token['tokenInfo']['address']
+		balances[token_symbol] = {'symbol': token_symbol, 'contract_addr':token_addr, 'balance': token_balance}
+		balances[token_symbol.lower()] = {'symbol': token_symbol, 'contract_addr':token_addr, 'balance': token_balance}
+		balances[token_addr] = {'symbol': token_symbol, 'contract_addr':token_addr, 'balance': token_balance}
+	return balances
