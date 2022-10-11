@@ -20,4 +20,4 @@ Methods:
 
 # Example
 An example usage of *make_transactions* is given in Example folder.   
-In example, an address will be taken from telegram account and tokens are sent on that account. To use it, you need to configure telegram details and your account details in ***settings.ini***
+In example, an address will be taken from telegram account and tokens are sent on that address. To use it, you need to configure telegram details and your account details in ***settings.ini***
