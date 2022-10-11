@@ -12,11 +12,11 @@ Add make_transactions.py to your working directory and import it
 `import make_transactions`   
 
 Methods:   
-1. approve: Call this method to approve your sender to make transaction (Approve only trusted APPs). It will make transaction on blockchain for the same.    
-2. send_token: Call this method to send ERC20 token from one address to another address. A transaction on Ethereum blockchain will be made for it.   
-3. send_eth: Call this method to send ETH to destination address. A transaction on Ethereum blockchain will be mmade to send ETH to destination address
-4. send_custom_data: This method will allow you to send custom data with your transaction. 
-5. get_all_balances: This function can be used to get balance of all tokens on address passed as parameter
+1. **approve:** Call this method to approve your sender to make transaction (Approve only trusted APPs). It will make transaction on blockchain for the same.    
+2. **send_token:** Call this method to send ERC20 token from one address to another address. A transaction on Ethereum blockchain will be made for it.   
+3. **send_eth:** Call this method to send ETH to destination address. A transaction on Ethereum blockchain will be mmade to send ETH to destination address
+4. **send_custom_data:** This method will allow you to send custom data with your transaction. 
+5. **get_all_balances:** This function can be used to get balance of all tokens on address passed as parameter
 
 # Example
 An example usage of *make_transactions* is given in Example folder.   
